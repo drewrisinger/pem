@@ -8,5 +8,5 @@ Put simply, you shouldn't ever be afraid to upgrade if you're using its public A
 If there is the need to break compatibility:
 
 1. It will be announced in the :doc:`changelog`,
-2. a deprecation warning will be raised for a year,
-3. backward compatibility will be finally broken no earlier than one year after step 1.
+2. A deprecation warning will be raised for a year,
+3. Backward compatibility will be finally broken no earlier than one year after step 1.
