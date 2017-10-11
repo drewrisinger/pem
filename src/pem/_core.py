@@ -93,6 +93,7 @@ _PEM_TO_CLASS = {
     b"DH PARAMETERS": DHParameters,
     b"NEW CERTIFICATE REQUEST": CertificateRequest,
     b"CERTIFICATE REQUEST": CertificateRequest,
+    b"PUBLIC KEY": Key
 }
 _PEM_RE = re.compile(
     b"-----BEGIN (" + b"|".join(_PEM_TO_CLASS.keys()) + b""")-----\r?

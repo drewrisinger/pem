@@ -12,6 +12,7 @@ from .data import (
     CERT_PEMS_NO_NEW_LINE,
     DH_PEM,
     KEY_PEM,
+    PUB_KEY_PEM,
 )
 
 
@@ -266,6 +267,15 @@ class TestParse(object):
         assert isinstance(key, pem.RSAPrivateKey)
         assert KEY_PEM == key.as_bytes()
 
+    def test_pub_key(self):
+        """
+        Parses a PEM string with a public key into a Key object.
+        """
+        rv = pem.parse(PUB_KEY_PEM)
+        key, = rv
+        assert isinstance(key, pem.Key)
+        assert PUB_KEY_PEM == key.as_bytes()
+		
     def test_certificates(self):
         """
         Parses a PEM string with multiple certificates into a list of
